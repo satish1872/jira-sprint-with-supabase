@@ -10,9 +10,13 @@ function DeleteButton({ id }) {
     setIsLoading(true);
     console.log("deleting id: " + id);
     // http://localhost:4000/tickets
-    const res = await fetch(`http://localhost:3000/api/tickets/${id}`, {
+   /*  const res = await fetch(`http://localhost:3000/api/tickets/${id}`, {
+      method: "DELETE",
+    }); */
+    const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/tickets/${id}`, {
       method: "DELETE",
     });
+
 
     const json = await res.json();
 

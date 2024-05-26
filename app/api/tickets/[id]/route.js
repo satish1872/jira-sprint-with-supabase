@@ -2,7 +2,7 @@ import { createRouteHandlerClient } from "@supabase/auth-helpers-nextjs";
 import { NextResponse } from "next/server";
 import { cookies } from "next/headers";
 
-export async function GET(_, { params }) {
+/* export async function GET(_, { params }) {
   const id = params.id;
 
   const res = await fetch(`http://localhost:4000/tickets/${id}`);
@@ -20,7 +20,7 @@ export async function GET(_, { params }) {
   return NextResponse.json(ticket, {
     status: 200,
   });
-}
+} */
 
 export async function DELETE(_, { params }) {
   const id = params.id;
